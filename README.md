@@ -1,24 +1,35 @@
-# README
+# ♪ pomomusic ♪
+ポモドーロ・テクニックの5分休憩でおすすめの曲を聴こう！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+## ■ アプリ概要
+- ポモドーロ・テクニックの5分休憩で聞いて欲しい音楽をランダムでセレクト!
+- アプリ制作者がおすすめする曲しかありません
+- 
 
-* Ruby version
+---
 
-* System dependencies
+## ■ このアプリを作成した目的
+デプロイする経験をしたかったからです。  
+あとは、自分が運営しているボカロPアカウントがあり、  
+その曲を聴いて欲しいという欲望もあります。  
 
-* Configuration
+---
 
-* Database creation
+## ■　アプリのリンク
 
-* Database initialization
+---
 
-* How to run the test suite
+## ■　技術スタック
+- フレームワーク：Ruby on Rails
+- UI／UX：Tailsind CSS
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+## ■　開発者コメント
+アプリを触っていただいた方、本当にありがとうございます。  
+memetraのStargazerという曲が私が作成した曲になっておりますので、  
+Xのフォローおよびチャンネル登録をお願いいたします。  
 
-* ...
+---
