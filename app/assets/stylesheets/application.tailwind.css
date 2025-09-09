@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カスタムカラーの定義 */
+:root {
+    --color-sand: #f5deb3;
+}
+
+/* カスタムユーティリティ */
+.bg-gradient-sand {
+    background: linear-gradient(to bottom, var(--color-sand), #ffffff);
+}
