@@ -1,10 +1,19 @@
 <div class="flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-2xl font-bold mb-4"><%= @video[:title] %></h1>
+  
   <!-- ランダムなYouTube動画埋め込み -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/動画ID" 
-          title="YouTube video" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  <iframe width="560" height="315"
+          src="<%= @video[:url] %>" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           allowfullscreen>
   </iframe>
+
+  <p class="text-center">
+    <% @video[:comment].split("\n").each do |line| %>
+      <span class="block"><%= line %></span>
+    <% end %>
+  </p>
 
   <!-- Homeに戻るボタン -->
   <%= link_to "ホームへ戻る", root_path, class: "mt-10 px-6 py-3 bg-blue-200 text-black font-semibold rounded shadow-md hover:bg-blue-100 hover:shadow-lg active:translate-y-0.5 transition-all" %>
