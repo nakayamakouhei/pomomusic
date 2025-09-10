@@ -1,0 +1,28 @@
+<div class="flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-2xl font-bold mb-4"><%= @video[:title] %></h1>
+  
+  <!-- ランダムなYouTube動画埋め込み -->
+  <iframe width="560" height="315"
+          src="<%= @video[:url] %>" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+  </iframe>
+
+  <p class="text-center mt-2">
+    <% @video[:comment].split("\n").each do |line| %>
+      <span class="block"><%= line %></span>
+    <% end %>
+  </p>
+
+  <!-- ボタン -->
+  <div class="flex gap-4 mt-10">
+    <%= link_to "ランダムな曲を聴く", video_path,
+    class: "w-48 px-6 py-3 bg-orange-200 text-blue-500 font-semibold rounded shadow-md 
+            hover:bg-orange-100 hover:shadow-lg active:translate-y-0.5 transition-all
+            drop-shadow-[0_0_1px_black] text-center"%>
+    <%= link_to "ホームへ戻る", root_path,
+    class: "w-48 px-6 py-3 bg-blue-200 text-black font-semibold rounded shadow-md 
+    hover:bg-blue-100 hover:shadow-lg active:translate-y-0.5 transition-all text-center" %>
+  </div>
+</div>
