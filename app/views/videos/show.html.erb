@@ -35,4 +35,20 @@
     class: "w-48 px-6 py-3 bg-blue-200 text-black font-semibold rounded shadow-md 
     hover:bg-blue-100 hover:shadow-lg active:translate-y-0.5 transition-all text-center" %>
   </div>
+  <br>
+  <!-- X共有ボタン -->
+<%= link_to "Xでシェアする",
+  "https://twitter.com/share?url=#{CGI.escape(@video[:url])}&text=#{CGI.escape(
+    "今回の休憩はこれを聴いたよ！\n" \
+    "#{@video[:title]}\n\n" \
+    "【アプリ情報：Pomomusic】\n" \
+    "https://pomomusic.onrender.com/video"
+  )}",
+  target: "_blank",
+  rel: "noopener noreferrer",
+  class: "px-4 py-2 bg-black text-white rounded hover:bg-gray-800 font-semibold flex items-center gap-2"
+%>
+
+
+
 </div>
