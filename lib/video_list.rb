@@ -95,10 +95,32 @@ module VideoList
       embed_url: "https://www.youtube.com/embed/d8vmHZIPFE0",
       page_url:  "https://www.youtube.com/watch?v=d8vmHZIPFE0",
       comment: "ギターがカッコ良すぎる\nベースも後半から動きまくりで良き"
+    },
+    {
+      title: "カーマイン／ELLEGARDEN",
+      embed_url: "https://www.youtube.com/embed/Qp8SwP3Ggl8",
+      page_url: "https://www.youtube.com/watch?v=Qp8SwP3Ggl8",
+      comment: "エルレが復活してワンピースが続いてなければ\n生まれてこなかった曲"
+    },
+    {
+      title: "午夜の待ち合わせ／Hello Sleepwalkers",
+      embed_url: "https://www.youtube.com/embed/J69oCCM1EcI",
+      page_url: "https://www.youtube.com/watch?v=J69oCCM1EcI",
+      comment: "シンプルにかっこいいし、疾走感がいい"
+    },
+    {
+      title: "冬の太陽／ストレイテナー",
+      embed_url: "https://www.youtube.com/embed/FCGhCbbgjtI",
+      page_url: "https://www.youtube.com/watch?v=FCGhCbbgjtI",
+      comment: "ライブで衝撃を受けた曲\n音源超えてくるのすごかった"
     }
   ].freeze
 
   def self.random
-    VIDEOS.sample
+    if rand < 0.2 / 1.2
+      return VIDEOS[0]
+    else
+      return (VIDEOS[1..-1]).sample
+    end
   end
 end
