@@ -8,7 +8,7 @@
     <!-- ランダムなYouTube動画埋め込み -->
     <div class="w-full flex justify-center mb-4">
       <iframe width="560" height="315"
-              src="<%= @video[:url] %>" 
+              src="<%= @video[:embed_url] %>" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowfullscreen>
@@ -37,18 +37,15 @@
   </div>
   <br>
   <!-- X共有ボタン -->
-<%= link_to "Xでシェアする",
-  "https://twitter.com/share?url=#{CGI.escape(@video[:url])}&text=#{CGI.escape(
-    "今回の休憩はこれを聴いたよ！\n" \
-    "#{@video[:title]}\n\n" \
-    "【アプリ情報：Pomomusic】\n" \
-    "https://pomomusic.onrender.com/video"
-  )}",
-  target: "_blank",
-  rel: "noopener noreferrer",
-  class: "px-4 py-2 bg-black text-white rounded hover:bg-gray-800 font-semibold flex items-center gap-2"
-%>
-
-
-
+  <%= link_to "Xでシェアする",
+    "https://twitter.com/share?url=#{CGI.escape(@video[:page_url])}&text=#{CGI.escape(
+      "今回の休憩はこれを聴いたよ！\n" \
+      "【#{@video[:title]}】\n\n" \
+      "【アプリ情報：Pomomusic】\n" \
+      "https://pomomusic.onrender.com/video"
+    )}",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    class: "px-4 py-2 bg-black text-white rounded hover:bg-gray-800 font-semibold flex items-center gap-2"
+  %>
 </div>
